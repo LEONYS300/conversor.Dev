@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Conversor</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1> <b>Conversor De Moedas</b></h1>
+
+        <form class="converter-form" id="conversorForm">
+
+            <div class="currency-row">
+
+                <div class="currency-input">
+                    <label for="amount"><b> valor</b> </label>
+                    <input type="number" id="amount" placeholder="digite o valor" step="0.1" min="0" required>
+                </div>
+
+                <div class="currency-select">
+
+                    <label for="fromCurrency"><b>De</b></label>
+
+                    <select id="fromCurrency" required>
+                        
+                        <option value="DKK">DKK - coroa dinamarquesa</option>
+                        <option value="NOK">NOK - coroa norueguesa</option>
+                        <option value="SEK">SEK - coroa sueca</option>
+                        <option value="USD">USD - dólar</option>
+                        <option value="AUD">AUD - dólar australiano</option>
+                        <option value="CAD">CAD - dólar canadense</option>
+                        <option value="EUR">EUR - euro</option>
+                        <option value="CHF">CHF - franco suíço</option>
+                        <option value="JPY">JPY - iene</option>
+                        <option value="GBP">GBP - libra</option>
+                        <option value="TRY">TRY - lira turca</option>
+                        <option value="MXN">MXN - peso mexicano</option>
+                        <option value="ARS">ARS - peso argentino</option>
+                        <option value="BRL" selected>BRL - real</option>
+                        <option value="ZAR">ZAR - rand sul-africano</option>
+                        <option value="RUB">RUB - rublo russo</option>
+                        <option value="INR">INR - rupia indiana</option>
+                        <option value="CNY">CNY - yuan</option>
+                        <option value="PLN">PLN - zloty polonês</option>
+                        
+                        
+                       
+                        <option value="KRW">KRW - won sul-coreano</option>
+                       
+                    </select>
+
+                </div>
+            </div>
+
+
+
+            <div class="currency-row">
+
+                <div class="currency-input">
+                    <label for="convertedAmount"><b> Resultado</b> </label>
+                    <input type="text" id="convertedAmount" placeholder="valor convertido" readonly>
+                </div>
+
+                <div class="currency-select">
+
+                    <label for="toCurrency"><b>De</b></label>
+
+                    <select id="toCurrency">
+
+                        <option value="DKK">DKK - coroa dinamarquesa</option>
+                        <option value="NOK">NOK - coroa norueguesa</option>
+                        <option value="SEK">SEK - coroa sueca</option>
+                        <option value="USD">USD - dólar</option>
+                        <option value="AUD">AUD - dólar australiano</option>
+                        <option value="CAD">CAD - dólar canadense</option>
+                        <option value="EUR">EUR - euro</option>
+                        <option value="CHF">CHF - franco suíço</option>
+                        <option value="JPY">JPY - iene</option>
+                        <option value="GBP">GBP - libra</option>
+                        <option value="TRY">TRY - lira turca</option>
+                        <option value="MXN">MXN - peso mexicano</option>
+                        <option value="ARS">ARS - peso argentino</option>
+                        <option value="BRL" selected>BRL - real</option>
+                        <option value="ZAR">ZAR - rand sul-africano</option>
+                        <option value="RUB">RUB - rublo russo</option>
+                        <option value="INR">INR - rupia indiana</option>
+                        <option value="CNY">CNY - yuan</option>
+                        <option value="PLN">PLN - zloty polonês</option>
+
+                    </select>
+                </div>
+            </div>
+
+
+            <button type="submit" class="converter-btn" id="converterBtn">
+                💰Converter moeda💸
+            </button>
+
+
+        </form>
+
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>buscando cotação...</p>
+        </div>
+
+        <div class="error"></div>
+
+        <div class="result"></div>
+
+
+        <div class="info">
+            <p><b>Taxas atualizadas em tempo real💡</b> </p>
+        </div>
+
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
